@@ -1,5 +1,5 @@
 //JS
-//frågor
+//frågor!
   
     let questions = [
       {
