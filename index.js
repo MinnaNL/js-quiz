@@ -27,7 +27,3 @@
             </main>
     </body>
 </html>
-  
-      quizForm.innerHTML += questionHtml;
-
-    });
