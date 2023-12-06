@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             quizForm.removeChild(child);
         }
     });
+<<<<<<< HEAD
 
     // Skapar och appendar en ny fieldsets för varje fråga
     questions.forEach((question, index) => {
@@ -107,3 +108,21 @@ document.addEventListener("DOMContentLoaded", function () {
         quizForm.append(fieldset); //Appendar den till quizForm
     });
 });
+=======
+
+    // Skapar och appendar en ny fieldsets för varje fråga
+    questions.forEach((question, index) => {
+        let fieldset = document.createElement("fieldset");
+        fieldset.innerHTML = `
+            <legend>Question ${index + 1}</legend>
+            <p id="question${index + 1}" class="questions">${question.question}</p>
+            <label><input type="radio" name="answer${index + 1}" value="true"> True</label>
+            <label><input type="radio" name="answer${index + 1}" value="false"> False</label>
+        `;
+        quizForm.append(fieldset); //Appendar den till quizForm
+    });
+});
+    quizForm.innerHTML += questionHtml;
+
+  });
+>>>>>>> fa597b77889443edd5a972ee42499ebcfe9520e1
