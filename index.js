@@ -106,4 +106,11 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         quizForm.append(fieldset); //Appendar den till quizForm
     });
+<<<<<<< HEAD
 });
+=======
+});
+    quizForm.innerHTML += questionHtml;
+
+  });
+>>>>>>> 51a23d8df4a8b5665546b0ba1bc6f360c1966848
