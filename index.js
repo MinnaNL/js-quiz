@@ -1,9 +1,15 @@
+  // Function to toggle dark mode
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+     }
+
 // EventListener för att se till att html-koden är laddad innan JS körs
 document.addEventListener("DOMContentLoaded", function () {
+  
   // Hämtar elementen och skapar variabler
   let quizForm = document.getElementById("quiz-form");
   let resultContainer = document.getElementById("results");
-
+  
   // Array av frågor och svaren
   const questions = [
       {
@@ -62,13 +68,22 @@ document.addEventListener("DOMContentLoaded", function () {
       quizForm.append(fieldset);
   });
 
-  // Hämtar submitknappen och skapar en variabel
+  //Hämtar knapparna och skapar variablar
   let submitButton = document.querySelector(".submit");
+  let resetButton = document.querySelector(".reset");
 
-  // Läggert till EventListner för när sumbitknappen klickas
+  //Läggert till EventListener för när submit klickas
   submitButton.addEventListener("click", function () {
-      // Anropar funktionen för att räkna ut och visa resultatscore
+      //Anropar funktionen för att visa resultatscore
       displayResults();
+      submitButton.disabled = true; // Disablar den efter
+  });
+
+  //Lägger på EventListener för när reset klickas
+  resetButton.addEventListener("click", function () {
+      document.getElementById("quiz-form").reset(); // Återställer formuläret
+      resultContainer.innerHTML = ""; // Tar bort tidigare resultat
+      submitButton.disabled = false; // Enablar submit knappet
   });
 
   // Funktion för att visa resultaten
@@ -122,7 +137,7 @@ if (score === questions.length) {
       // Om frågan har fler alternativ
       if (question.options && Array.isArray(question.options)) {
           // Skapar radiobuttons med flera frågor
-          return question.options.map((option, optionIndex) => `
+          return question.options.map((option) => `
               <label><input type="radio" name="answer${index + 1}" value="${option}"> ${option}</label>
           `).join('');
       } else {
