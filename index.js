@@ -1,15 +1,21 @@
-  // Function to toggle dark mode
-  function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-     }
+// Togglar dark mode/ light mode
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+
+  // ändrar även fieldset-färgen för dark-mode
+  const fieldsets = document.querySelectorAll('fieldset');
+  fieldsets.forEach(fieldset => {
+      fieldset.classList.toggle("dark-mode");
+  });
+}
 
 // EventListener för att se till att html-koden är laddad innan JS körs
 document.addEventListener("DOMContentLoaded", function () {
-  
+
   // Hämtar elementen och skapar variabler
   let quizForm = document.getElementById("quiz-form");
   let resultContainer = document.getElementById("results");
-  
+
   // Array av frågor och svaren
   const questions = [
       {
@@ -17,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
           answer: true,
       },
       {
-        question: "The Red Wedding is not based on a real event",
-        answer: false,
-    },
+          question: "The Red Wedding is based on a real event",
+          answer: true,
+      },
       {
           question: "Which of these characters was NOT killed by Arya?",
           options: ["Peter Baelish", "Tywin Lannister", "Walter Frey", "The Night King"],
@@ -35,29 +41,30 @@ document.addEventListener("DOMContentLoaded", function () {
           answer: true,
       },
       {
-        question: "The First Men created the white walkers",
-        answer: false,
-    },
-    {
-      question: "Joffrey was a beloved king",
-      answer: false,
-  },
+          question: "The First Men created the white walkers",
+          answer: false,
+      },
+      {
+          question: "Joffrey was a beloved king",
+          answer: false,
+      },
       {
           question: "Tyrion Lannister drinks and knows things",
           answer: true,
       },
       {
-        question: "Which of the following is NOT a real house motto?",
-        options: ["Though All Men Do Despise Us", "Ours Is The Fury", "We Do Not Yield", "None So Fierce"],
-        answer: "We Do Not Yield",
-    },
+          question: "Which of the following is NOT a real house motto?",
+          options: ["Though All Men Do Despise Us", "Ours Is The Fury", "We Do Not Yield", "None So Fierce"],
+          answer: "We Do Not Yield",
+      },
       {
           question: "Winter is coming",
           answer: true,
       },
   ];
-    // Genererar och lägger in fieldsets för varje fråga
-    questions.forEach((question, index) => {
+
+  // Genererar och lägger in fieldsets för varje fråga
+  questions.forEach((question, index) => {
       //Skapar fieldset för varje fråga
       let fieldset = document.createElement("fieldset");
       fieldset.innerHTML = `
@@ -72,11 +79,21 @@ document.addEventListener("DOMContentLoaded", function () {
   let submitButton = document.querySelector(".submit");
   let resetButton = document.querySelector(".reset");
 
+  // Scrollar mjukt till en specifik plats
+  function smoothScrollTo(targetId) {
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+  }
+
   //Läggert till EventListener för när submit klickas
   submitButton.addEventListener("click", function () {
       //Anropar funktionen för att visa resultatscore
       displayResults();
-      submitButton.disabled = true; // Disablar den efter
+      smoothScrollTo("bottom"); // scrollar ner till botten av sidan, resultatet
+      submitButton.disabled = true; // Disablar den efter 
   });
 
   //Lägger på EventListener för när reset klickas
@@ -84,11 +101,12 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("quiz-form").reset(); // Återställer formuläret
       resultContainer.innerHTML = ""; // Tar bort tidigare resultat
       submitButton.disabled = false; // Enablar submit knappet
+      smoothScrollTo("intro"); // scrollar upp till intro, börja om
   });
 
   // Funktion för att visa resultaten
   function displayResults() {
-    //variabel som trackar scoren, börjar på värdet noll
+      //variabel som trackar scoren, börjar på värdet noll
       let score = 0;
 
       //Loopar igenom frågearrayen
@@ -109,24 +127,23 @@ document.addEventListener("DOMContentLoaded", function () {
       let resultText;
       let resultColor;
 
-// Ger olika feedback/ färg baserat på poäng
-if (score === questions.length) {
-    resultText = ` You scored ${score} out of ${questions.length} -You are the rightful ruler of Westeros!`;
-    resultColor = "green"; //Om du får alla rätt (extra)
-} else if (score > 7) {
-    resultText = `You scored ${score} out of ${questions.length} - You must have the blood of the Dragon!`;
-    resultColor = "green"; //Om du får mer än 7/10 (7.5 finns inte så vi rundar upp till 8)
-} else if (score === 0) {
-    resultText = `You scored ${score} out of ${questions.length}. Your name must be Jon Snow, because you know nothing!`;
-    resultColor = "red"; //Om du får 0 rätt (extra)
-} else if (score >= 5) {
-    resultText = `You scored ${score} out of ${questions.length}. Mediocre neither enter into glory nor sorrow.`;
-    resultColor = "orange"; //Om du får minst hälften rätt
-} else if (score < 5) {
-    resultText = `You scored ${score} out of ${questions.length}. Don't give up, there are always lessons in failure!`;
-    resultColor = "red"; //Om du får mindre än fem rätt
-}
-
+      // Ger olika feedback/ färg baserat på poäng
+      if (score === questions.length) {
+          resultText = ` You scored ${score} out of ${questions.length} -You are the rightful ruler of Westeros!`;
+          resultColor = "green"; //Om du får alla rätt (extra)
+      } else if (score > 7) {
+          resultText = `You scored ${score} out of ${questions.length} - You must have the blood of the Dragon!`;
+          resultColor = "green"; //Om du får mer än 7/10 (7.5 finns inte så vi rundar upp till 8)
+      } else if (score === 0) {
+          resultText = `You scored ${score} out of ${questions.length}. Your name must be Jon Snow, because you know nothing!`;
+          resultColor = "red"; //Om du får 0 rätt (extra)
+      } else if (score >= 5) {
+          resultText = `You scored ${score} out of ${questions.length}. The mediocre neither enter into glory nor sorrow.`;
+          resultColor = "orange"; //Om du får minst hälften rätt
+      } else if (score < 5) {
+          resultText = `You scored ${score} out of ${questions.length}. Try again, there are always lessons in failure!`;
+          resultColor = "red"; //Om du får mindre än fem rätt
+      }
 
       // Skriver ut resultatet, din score och färgen
       resultContainer.innerHTML = `<span style="color: ${resultColor}">${resultText}</span>`;

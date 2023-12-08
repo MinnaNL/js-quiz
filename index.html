@@ -9,23 +9,26 @@
     </head>
     <body>
         <main>
-            <section>
+            <header id="intro">
             <h1> A Quiz of Ice and Fire</h1>
-            <p> Welcome to quiz</p>
+            <p> Will you rule the seven kingdoms or bring dishonor to your family name? I wish you good fortune in the quiz to come!</p>
             <!-- dark mode knapp -->
         <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
-            </section>
-                <div class="quiz-container">
+            </header>
+                <section id="quiz-container">
                     <form id="quiz-form">
                     <!-- Här kommer frågorna hamna -->
                     </form>
-                    
+
                     <button class="submit" type="button">Check your answers</button>
-                    <button class="reset" type="button">Reset Quiz</button>
+                    <button class="reset" type="button">Restart Quiz</button>
+                </section>
+                <section>
                     <h2 id="results-h">Results</h2>
                     <p id="results"></p>
-                </div>
+                    <a id="bottom"></a>
+                </section>
         </main>
     </body>
 </html>
