@@ -1,3 +1,9 @@
+Ändra efter användartest:
+
+double negative på frågan om red wedding
+THE mediocre neither ....
+
+
 Process:
 
 Klar med allt för G utom Dark-mode. Github har strulat lite, nånting med remote branch och origin branch. Nu är det i synk och funkar som den ska (so far). 
