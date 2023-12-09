@@ -1,4 +1,11 @@
-Ändra efter användartest:
+Ändra om ordningen på frågorna, lagt till intro
+Lagt till scrolla upp och ner funktion. Nu tas man direkt till resultaten och behöver inte scrolla. upp när man trycker på restart
+
+Testar att göra multiple choice frågor, alltså två/tre rätta svar. funkar inte än
+Vill fixa lite mer med stylingen och hitta bilder
+
+
+Ändra efter test med sambo
 
 double negative på frågan om red wedding
 THE mediocre neither ....

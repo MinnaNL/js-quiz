@@ -19,17 +19,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Array av frågor och svaren
   const questions = [
       {
-          question: "Daenerys Targaryen is also known as the Mother of Dragons",
-          answer: true,
+          question: "Joffrey was a beloved king",
+          answer: false,
       },
       {
           question: "The Red Wedding is based on a real event",
           answer: true,
       },
       {
-          question: "Which of these characters was NOT killed by Arya?",
+          question: "Which character was NOT killed by Arya?",
           options: ["Peter Baelish", "Tywin Lannister", "Walter Frey", "The Night King"],
-          answer: ["Tywin Lannister"],
+          answer: "Tywin Lannister",
+      },
+      {
+          question: "Tyrion drinks and knows things",
+          answer: true,
       },
       {
           question: "Which character has all his reproductive organs intact?",
@@ -37,25 +41,24 @@ document.addEventListener("DOMContentLoaded", function () {
           answer: "The Mountain",
       },
       {
+          question: "The First Men created the White Walkers",
+          answer: false,
+      },
+      {
+          question: "Which characters served as the Hand of the King at some point?",
+          options: ["Ned Stark", "Tyrion Lannister", "Tywin Lannister", "Renly Baratheon"],
+          answer: ["Ned Stark", "Tyrion Lannister", "Tywin Lannister"],
+          type: "multiple",
+      },
+      {
           question: "There are only four episodes that don't feature any deaths",
           answer: true,
       },
       {
-          question: "The First Men created the white walkers",
-          answer: false,
-      },
-      {
-          question: "Joffrey was a beloved king",
-          answer: false,
-      },
-      {
-          question: "Tyrion Lannister drinks and knows things",
-          answer: true,
-      },
-      {
-          question: "Which of the following is NOT a real house motto?",
-          options: ["Though All Men Do Despise Us", "Ours Is The Fury", "We Do Not Yield", "None So Fierce"],
-          answer: "We Do Not Yield",
+          question: "Which of the following are real house mottos?",
+          options: ["A Lannister Always Pays His Debts","Righteous In Wrath", "Ours Is The Fury", "We Do Not Yield"],
+          answer: ["Righteous In Wrath", "Ours Is The Fury"],
+          type: "multiple",
       },
       {
           question: "Winter is coming",
