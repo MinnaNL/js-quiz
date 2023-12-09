@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
           question: "Which of the following are real house mottos?",
           options: ["A Lannister Always Pays His Debts","Righteous In Wrath", "Ours Is The Fury", "We Do Not Yield"],
           answer: ["Righteous In Wrath", "Ours Is The Fury"],
+          type: "multiple",
       },
       {
           question: "Winter is coming",
