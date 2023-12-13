@@ -103,6 +103,7 @@ function toggleDarkMode() {
         displayResults();
         smoothScrollTo("bottom"); // scrollar ner till botten av sidan, resultatet
         submitButton.disabled = true; // Disablar den efter 
+        showResultContainer(); // Visar result-container
     });
   
     //Lägger på EventListener för när reset klickas
@@ -110,9 +111,14 @@ function toggleDarkMode() {
         document.getElementById("quiz-form").reset(); // Återställer formuläret
         resultContainer.innerHTML = ""; // Tar bort tidigare resultat
         submitButton.disabled = false; // Enablar submit knappet
+        hideResultContainer(); // Göm result-container igen
         smoothScrollTo("intro"); // scrollar upp till intro, börja om
     });
-  
+  // Funktion för att gömma result-containern igen
+    function hideResultContainer() {
+        let resultContainer = document.getElementById("result-container");
+        resultContainer.style.display = "none";
+}
     // Funktion för att visa resultaten
     function displayResults() {
         //variabel som trackar scoren, börjar på värdet noll
@@ -154,8 +160,15 @@ function toggleDarkMode() {
             resultColor = '#d01e1e'; //Röd om du får mindre än fem rätt
         }
   
-        // Skriver ut resultatet, din score och färgen
-        resultContainer.innerHTML = `<span style="color: ${resultColor}">${resultText}</span>`;
+    // Skriver ut resultatet, din score och färgen
+    resultContainer.innerHTML = `<span style="color: ${resultColor}">${resultText}</span>`;
+    showResultContainer(); // Visar result-container
+    }
+
+    // Funktionen för att visa result-container sectionen
+    function showResultContainer() {
+        let resultContainer = document.getElementById("result-container");
+        resultContainer.style.display = "block";
     }
   
     //Funktion för att generera svarsalternativ beroende på frågetyp
