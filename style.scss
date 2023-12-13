@@ -1,14 +1,6 @@
 //scss
     //importerar variabler
-    @import "variables";
-
-    //Spotify-aside (spelar got intro)
-    .spotify-aside {
-        width: 20%;
-        float: left;
-        margin-right: 20px; /* Add some margin to separate it from other content */
-    }
-    
+    @import "variables";    
     //Generell styling
         //Body
         body {
@@ -52,12 +44,12 @@
         p {
             font-size: 20px;
         }
-        #toggle-container {
+        #button-container {
             display: flex;
-            justify-content: flex-end; /* Aligns the button to the right within the container */
+            justify-content: flex-end; 
         }
-        //Dekorativ snirklig linje
-        // Flaired edges, by Tomas Theunissen 
+        //Dekorativ snirklig linje OBS all css för hr KOPIERAD och sen lite anpassad, se cred nedan
+        /*Flaired edges, by Tomas Theunissen */
         hr {
             overflow: visible; /* For IE */
             height: 20px;
@@ -77,6 +69,7 @@
             border-width: 0 0 1.5px 0;
             border-radius: 20px;
         }
+
         //Knappar
         button {
             background-color: $buttonColor; 
@@ -90,6 +83,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             border-radius: 5px;
             transition: background-color 0.3s;
+            margin: 0 0 0 20px;
         }
         //Hoverfärg
         button:hover {
