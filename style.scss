@@ -1,8 +1,14 @@
 //scss
-
     //importerar variabler
     @import "variables";
 
+    //Spotify-aside (spelar got intro)
+    .spotify-aside {
+        width: 20%;
+        float: left;
+        margin-right: 20px; /* Add some margin to separate it from other content */
+    }
+    
     //Generell styling
         //Body
         body {
@@ -12,9 +18,10 @@
         }
         //Main
         main {
-            max-width: 800px;
+            max-width: 750px;
             margin: 50px auto;
-            padding: 20px;
+            padding: 5%;
+            box-sizing: border-box;
             background-color: $bgMain;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
             border-radius: 8px;
@@ -23,47 +30,50 @@
         }
         //Header
         header {
-            text-align: center;
             padding-bottom: 20px;
             font-family: 'Cinzel', serif;
         }
         //Headings
         h1 {
             font-family: 'Cinzel Decorative', serif;
-            font-weight: bold;
-            color: $headingColor; 
+            font-weight: 900;
+            color: $h1Color; 
             font-size: 40px;
+            text-align: center;
         }
         h2 {
-            text-align: center;
-            color: $headingColor; 
             font-family: 'Cinzel Decorative', serif;
-            margin-top: 30px;
+            margin: 10px 0 20px 20px;
             font-size: 30px;
-            font-weight: 700;
+            font-weight: 600;
+            text-align: center;
         }
         //Paragraftext
         p {
             font-size: 20px;
         }
+        #toggle-container {
+            display: flex;
+            justify-content: flex-end; /* Aligns the button to the right within the container */
+        }
         //Dekorativ snirklig linje
         // Flaired edges, by Tomas Theunissen 
         hr {
             overflow: visible; /* For IE */
-            height: 30px;
+            height: 20px;
             border-style: solid;
-            border-color: $fieldsetBorder;
+            border-color: $decoColor;
             border-width: 1.5px 0 0 0;
             border-radius: 20px;
-            margin: 30px 0 30px 0;
+            margin: 30px 2px;
         }
         hr:before { /* Not really supposed to work, but does */
             display: block;
             content: "";
-            height: 30px;
-            margin-top: -31px;
+            height: 20px;
+            margin: -22px 2px 0 2px;
             border-style: solid;
-            border-color: $fieldsetBorder;
+            border-color: $decoColor;
             border-width: 0 0 1.5px 0;
             border-radius: 20px;
         }
@@ -91,11 +101,14 @@
             cursor: not-allowed;
         }
         //Formulär
+        #quiz-container{
+            margin: 10px 0 100px 0;
+        }
         fieldset {
             border: 2px solid;
             border-color: $fieldsetBorder;
             border-radius: 5px;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
             transition: border-color 0.3s;
             font-size: 20px;
             font-weight: 600;
@@ -116,28 +129,31 @@
 
         input[type="radio"] {
             margin-right: 5px;
-            
             //Checkad radio
             &:checked {
-            background-color: $headingColor;
-            color: $headingColor;
             //Custum-färg på checkade radios
             accent-color: $accentColor; 
             }
         }
-        // Knappar i mitten
+        // Knappar
         .submit,
-        .reset {
+        .reset
+        {
             display: block;
-            margin: 20px auto;
+            margin: 30px auto;
         }
+
+
         //Resultat
+        #result-container{
+            margin-top: 160px;
+        }
         #results {
             text-align: center;
             font-size: 20px;
             font-weight: 700;
             font-family: 'Cinzel', serif;
-            margin-top: 10px;
+            margin: 30px;
         }
 
 //Importerar dark-mode, efter default-stylingen

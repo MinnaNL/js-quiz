@@ -7,27 +7,28 @@
     //Färger
         // Färger light-mode (default)
             //Bakgrunder
-            $bgBody: #1b5a63;
-            $bgMain: #9abab8;
+            $bgBody: #1c7079;
+            $bgMain: #EBEAE7;
             //Text
-            $headingColor: #97291d;
+            $h1Color: #a92525;
             $textColor: #171719;
             //Knappar
             $buttonTextColor:#e5e3e8 ;
-            $buttonColor: #094440;
-            $buttonHover: #093a44;
+            $buttonColor: #0b7274;
+            $buttonHover: #0e4c58;
             $buttonDisabled: #817c87;
             //formulär
-            $legendColor: #8b271c;
-            $fieldsetBorder: #95770a;
+            $legendColor: #a92525;
+            $fieldsetBorder: #be7612;
             $accentColor: #088e93; 
 
+            $decoColor: #be7612;
         //Färger dark-mode
             //Bakgrunder
-            $bgBodyDark: #111927;
-            $bgMainDark: #1a263a;
+            $bgBodyDark: #232f44;
+            $bgMainDark: #111927;
             //Text
-            $headingColorDark: darkred;
+            $headingColorDark: #a92525;
             $textColorDark: #c0bec1;
             //Formulär
-            $fieldsetBorderDark: #792427;
+            $fieldsetBorderDark: rgb(140, 19, 19);
