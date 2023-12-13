@@ -1,70 +1,110 @@
+.spotify-aside {
+  width: 20%;
+  float: left;
+  margin-right: 20px; /* Add some margin to separate it from other content */
+}
+
 body {
-  background-color: #2c3e50;
+  background-color: #1c7079;
   font-family: "Cinzel", serif;
-  color: #1c1c23;
+  color: #171719;
 }
 
 main {
-  max-width: 800px;
+  max-width: 750px;
   margin: 50px auto;
-  padding: 20px;
-  background-color: #34495e;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 5%;
+  box-sizing: border-box;
+  background-color: #EBEAE7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   transition: background-color 0.3s, box-shadow 0.3s;
   font-family: "Fauna", serif;
 }
 
 header {
-  text-align: center;
   padding-bottom: 20px;
   font-family: "Cinzel", serif;
 }
 
 h1 {
   font-family: "Cinzel Decorative", serif;
-  font-weight: bold;
-  color: #e74c3c;
+  font-weight: 900;
+  color: #a92525;
   font-size: 40px;
+  text-align: center;
 }
 
 h2 {
-  text-align: center;
-  color: #e74c3c;
   font-family: "Cinzel Decorative", serif;
-  margin-top: 30px;
+  margin: 10px 0 20px 20px;
   font-size: 30px;
+  font-weight: 600;
+  text-align: center;
 }
 
 p {
   font-size: 20px;
 }
 
+#toggle-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the button to the right within the container */
+}
+
+hr {
+  overflow: visible; /* For IE */
+  height: 20px;
+  border-style: solid;
+  border-color: #be7612;
+  border-width: 1.5px 0 0 0;
+  border-radius: 20px;
+  margin: 30px 2px;
+}
+
+hr:before { /* Not really supposed to work, but does */
+  display: block;
+  content: "";
+  height: 20px;
+  margin: -22px 2px 0 2px;
+  border-style: solid;
+  border-color: #be7612;
+  border-width: 0 0 1.5px 0;
+  border-radius: 20px;
+}
+
 button {
-  background-color: #075e5d;
-  color: #d1ced5;
+  background-color: #0b7274;
+  color: #e5e3e8;
+  text-transform: uppercase;
   padding: 10px 20px;
   font-size: 14px;
+  font-family: "Fauna", serif;
   border: none;
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #054a49;
+  background-color: #0e4c58;
 }
 
-/* Disabled Button Styles */
 button:disabled {
   background-color: #817c87;
   cursor: not-allowed;
 }
 
+#quiz-container {
+  margin: 10px 0 100px 0;
+}
+
 fieldset {
-  border: 2px solid #000;
+  border: 2px solid;
+  border-color: #be7612;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   transition: border-color 0.3s;
   font-size: 20px;
   font-weight: 600;
@@ -74,7 +114,7 @@ legend {
   font-size: 20px;
   font-weight: bold;
   font-family: "Cinzel", serif;
-  color: #e74c3c;
+  color: #a92525;
 }
 
 label {
@@ -85,31 +125,32 @@ label {
 
 input[type=radio] {
   margin-right: 5px;
-  /* Checked radio button*/
 }
 input[type=radio]:checked {
-  background-color: #e74c3c;
-  color: #e74c3c;
-  accent-color: #3a0d8f;
+  accent-color: #088e93;
 }
 
 .submit,
 .reset {
   display: block;
-  margin: 20px auto;
+  margin: 30px auto;
+}
+
+#result-container {
+  margin-top: 160px;
 }
 
 #results {
   text-align: center;
   font-size: 20px;
+  font-weight: 700;
   font-family: "Cinzel", serif;
-  margin-top: 10px;
+  margin: 30px;
 }
 
-/* Dark Mode Styles */
 body.dark-mode {
-  background-color: #111927;
-  color: #d1ced5;
+  background-color: #232f44;
+  color: #c0bec1;
 }
 
 main.dark-mode {
@@ -117,5 +158,5 @@ main.dark-mode {
 }
 
 fieldset.dark-mode {
-  border: 2px solid #792427;
+  border-color: rgb(140, 19, 19);
 }/*# sourceMappingURL=style.css.map */

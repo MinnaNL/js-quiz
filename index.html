@@ -7,31 +7,38 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&family=Fauna+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600;700;800;900&family=Fauna+One&display=swap" rel="stylesheet">
         <script src="index.js" defer></script>
     </head>
     <body>
+        <aside class="spotify-aside">
+            <iframe style="border-radius: 12px;" src="https://open.spotify.com/embed/track/2q6fxAvSpqXR4jx9Ne7RGz?utm_source=generator&theme=0" width="100%" height="100" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </aside>
         <main>
             <header id="intro">
+            <div id="toggle-container">
+            <!-- dark/light mode knapp -->
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+            </div>
+            <hr>
             <h1> A Quiz of Ice and Fire</h1>
             <p> Will you rule the seven kingdoms or bring dishonor to your house?</p>
             <p>I wish you good fortune in the quiz to come!</p>
-            <!-- dark mode knapp -->
-        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-
+        <hr>
             </header>
                 <section id="quiz-container">
                     <form id="quiz-form">
                     <!-- Här kommer frågorna hamna -->
                     </form>
-
                     <button class="submit" type="button">Check your answers</button>
-                    <button class="reset" type="button">Restart Quiz</button>
                 </section>
-                <section>
+                <section id="result-container">
+                    <hr>
                     <h2 id="results-h">Results</h2>
                     <p id="results"></p>
+                    <button class="reset" type="button">Restart Quiz</button>
                     <a id="bottom"></a>
+                    <hr>
                 </section>
         </main>
     </body>
