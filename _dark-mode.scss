@@ -1,0 +1,14 @@
+/* Dark Mode Styles */
+
+    body.dark-mode {
+        background-color: $bgBodyDark  ; 
+        color: $textColorDark;
+    }
+
+    main.dark-mode {
+        background-color: $bgMainDark; 
+    }
+
+    fieldset.dark-mode {
+        border: 2px solid $fieldsetBorderDark;
+    }
