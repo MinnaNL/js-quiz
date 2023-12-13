@@ -140,14 +140,14 @@
 
         //Resultat
         #result-container{
-            margin-top: 160px;
+            display: none;
         }
         #results {
             text-align: center;
             font-size: 20px;
             font-weight: 700;
             font-family: 'Cinzel', serif;
-            margin: 30px;
+            margin: 30px 0 0 0;
         }
 
 //Importerar dark-mode, efter default-stylingen
