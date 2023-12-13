@@ -2,7 +2,13 @@
 function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
     document.querySelector('main').classList.toggle("dark-mode");
-  }
+
+      // ändrar även fieldset-färgen för dark-mode
+  const fieldsets = document.querySelectorAll('fieldset');
+  fieldsets.forEach(fieldset => {
+      fieldset.classList.toggle("dark-mode");
+  });
+}
   
   // EventListener för att se till att html-koden är laddad innan JS körs
   document.addEventListener("DOMContentLoaded", function () {
@@ -126,19 +132,19 @@ function toggleDarkMode() {
         // Ger olika feedback/ färg baserat på poäng
         if (score === questions.length) {
             resultText = ` You scored ${score} out of ${questions.length} -You are the rightful ruler of Westeros!`;
-            resultColor = "green"; //Om du får alla rätt (extra)
+            resultColor = '#0f8534'; //Grön om du får alla rätt (extra)
         } else if (score > 7) {
             resultText = `You scored ${score} out of ${questions.length} - You must have the blood of the Dragon!`;
-            resultColor = "green"; //Om du får mer än 7/10 (7.5 finns inte så vi rundar upp till 8)
+            resultColor = '#0f8534'; //Grön om du får mer än 7/10 (7.5 finns inte så vi rundar upp till 8)
         } else if (score === 0) {
-            resultText = `You scored ${score} out of ${questions.length}. Your name must be Jon Snow, because you know nothing!`;
-            resultColor = "red"; //Om du får 0 rätt (extra)
+            resultText = `You scored ${score} out of ${questions.length} - Your name must be Jon Snow, because you know nothing!`;
+            resultColor = '#bd3706'; //Röd om du får 0 rätt (extra)
         } else if (score >= 5) {
-            resultText = `You scored ${score} out of ${questions.length}. The mediocre neither enter into glory nor sorrow.`;
-            resultColor = "orange"; //Om du får minst hälften rätt
+            resultText = `You scored ${score} out of ${questions.length} - The mediocre neither enter into glory nor sorrow.`;
+            resultColor = '#bd7a06'; //Orange om du får minst hälften rätt
         } else if (score < 5) {
-            resultText = `You scored ${score} out of ${questions.length}. Try again, there are always lessons in failure!`;
-            resultColor = "red"; //Om du får mindre än fem rätt
+            resultText = `You scored ${score} out of ${questions.length} -Try again, there are always lessons in failure!`;
+            resultColor = '#e74c3c'; //Röd om du får mindre än fem rätt
         }
   
         // Skriver ut resultatet, din score och färgen

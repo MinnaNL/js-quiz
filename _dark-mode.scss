@@ -10,5 +10,6 @@
     }
 
     fieldset.dark-mode {
-        border: 2px solid $fieldsetBorderDark;
+        border: 2px solid;
+        border-color: $fieldsetBorderDark;
     }

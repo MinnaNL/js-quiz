@@ -1,15 +1,15 @@
 body {
-  background-color: #2c3e50;
+  background-color: #1b5a63;
   font-family: "Cinzel", serif;
-  color: #1c1c23;
+  color: #171719;
 }
 
 main {
   max-width: 800px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #34495e;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #9abab8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   transition: background-color 0.3s, box-shadow 0.3s;
   font-family: "Fauna", serif;
@@ -24,45 +24,70 @@ header {
 h1 {
   font-family: "Cinzel Decorative", serif;
   font-weight: bold;
-  color: #e74c3c;
+  color: #97291d;
   font-size: 40px;
 }
 
 h2 {
   text-align: center;
-  color: #e74c3c;
+  color: #97291d;
   font-family: "Cinzel Decorative", serif;
   margin-top: 30px;
   font-size: 30px;
+  font-weight: 700;
 }
 
 p {
   font-size: 20px;
 }
 
+hr {
+  overflow: visible; /* For IE */
+  height: 30px;
+  border-style: solid;
+  border-color: #95770a;
+  border-width: 1.5px 0 0 0;
+  border-radius: 20px;
+  margin: 30px 0 30px 0;
+}
+
+hr:before { /* Not really supposed to work, but does */
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #95770a;
+  border-width: 0 0 1.5px 0;
+  border-radius: 20px;
+}
+
 button {
-  background-color: #075e5d;
-  color: #d1ced5;
+  background-color: #094440;
+  color: #e5e3e8;
+  text-transform: uppercase;
   padding: 10px 20px;
   font-size: 14px;
+  font-family: "Fauna", serif;
   border: none;
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #054a49;
+  background-color: #093a44;
 }
 
-/* Disabled Button Styles */
 button:disabled {
   background-color: #817c87;
   cursor: not-allowed;
 }
 
 fieldset {
-  border: 2px solid #000;
+  border: 2px solid;
+  border-color: #95770a;
   border-radius: 5px;
   margin-bottom: 20px;
   transition: border-color 0.3s;
@@ -74,7 +99,7 @@ legend {
   font-size: 20px;
   font-weight: bold;
   font-family: "Cinzel", serif;
-  color: #e74c3c;
+  color: #8b271c;
 }
 
 label {
@@ -85,12 +110,11 @@ label {
 
 input[type=radio] {
   margin-right: 5px;
-  /* Checked radio button*/
 }
 input[type=radio]:checked {
-  background-color: #e74c3c;
-  color: #e74c3c;
-  accent-color: #3a0d8f;
+  background-color: #97291d;
+  color: #97291d;
+  accent-color: #088e93;
 }
 
 .submit,
@@ -102,6 +126,7 @@ input[type=radio]:checked {
 #results {
   text-align: center;
   font-size: 20px;
+  font-weight: 700;
   font-family: "Cinzel", serif;
   margin-top: 10px;
 }
@@ -109,13 +134,14 @@ input[type=radio]:checked {
 /* Dark Mode Styles */
 body.dark-mode {
   background-color: #111927;
-  color: #d1ced5;
+  color: #c0bec1;
 }
 
 main.dark-mode {
-  background-color: #111927;
+  background-color: #1a263a;
 }
 
 fieldset.dark-mode {
-  border: 2px solid #792427;
+  border: 2px solid;
+  border-color: #792427;
 }/*# sourceMappingURL=style.css.map */

@@ -1,44 +1,33 @@
 // Variables
 
     //Fonts
-     $mainFont: "Fauna, serif";
-    $headingFont: "Cinzel, serif";
+        //$mainFont: "Fauna, serif";
+        //$headingFont: "Cinzel, serif";
    
     //Färger
-        //Result-färger
-        $resultRed: #e74c3c;
-        $resultOrange: #ff952a;
-        $resultGreen: #72ca15;
-
         // Färger light-mode (default)
-        $bgBody: #2c3e50;
-        $bgMain: #34495e;
-
-        $headingColor: #e74c3c;
-        $textColor: #1c1c23;
-
-        $buttonTextColor:#d1ced5 ;
-        $buttonColor: #075e5d;
-        $buttonHover: #054a49;
-        $buttonDisabled: #817c87;
-
-        $legendColor: #e74c3c;
-        $fieldsetBorder: #000;
+            //Bakgrunder
+            $bgBody: #1b5a63;
+            $bgMain: #9abab8;
+            //Text
+            $headingColor: #97291d;
+            $textColor: #171719;
+            //Knappar
+            $buttonTextColor:#e5e3e8 ;
+            $buttonColor: #094440;
+            $buttonHover: #093a44;
+            $buttonDisabled: #817c87;
+            //formulär
+            $legendColor: #8b271c;
+            $fieldsetBorder: #95770a;
+            $accentColor: #088e93; 
 
         //Färger dark-mode
-
-        $bgBodyDark: #111927;
-        $bgMainDark: #111927;
-
-        $headingColorDark: darkred;
-        $textColorDark: #d1ced5;
-
-       // $buttonTextColorDark: #fff;
-        //$buttonColorDark: #fff;
-        //$buttonHoverDark: #fff;
-        //$buttondisabledDark: #fff;
-
-        $legendColorDark: #e74c3c;
-        $fieldsetBorderDark: #792427;
-
-
+            //Bakgrunder
+            $bgBodyDark: #111927;
+            $bgMainDark: #1a263a;
+            //Text
+            $headingColorDark: darkred;
+            $textColorDark: #c0bec1;
+            //Formulär
+            $fieldsetBorderDark: #792427;
