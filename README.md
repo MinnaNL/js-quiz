@@ -1,1 +1,1 @@
-LOTR quiz with light mode and dark mode for Javascript 1 
+Game of thrones quiz with light mode and dark mode
